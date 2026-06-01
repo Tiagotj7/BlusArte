@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Orbitron', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --color-brand-orange: #F57C00;
+  --color-brand-orange-light: #FF9800;
+  --color-brand-orange-dark: #E65100;
+  --color-brand-black: #1A1A1A;
+  --color-brand-dark: #2D2D2D;
+  --color-brand-gray: #F5F5F5;
+  --color-brand-white: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FAFAFA;
+  color: #1A1A1A;
+}
+
+.font-display {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F57C00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E65100;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 124, 0, 0.4); }
+  50% { box-shadow: 0 0 20px 10px rgba(245, 124, 0, 0.2); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
