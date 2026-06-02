@@ -6,7 +6,7 @@ export default function CartDrawer() {
   const { items, isCartOpen, setIsCartOpen, updateQuantity, removeFromCart, totalPrice, totalItems } = useCart();
 
   const handleWhatsAppCheckout = () => {
-    const phone = "5511999999999"; // Número do vendedor
+    const phone = "5575981482035"; // Número do vendedor
     let message = "*Olá! Quero finalizar minha compra na BLUSARTE*\n\n";
     message += "*Itens do pedido:*\n";
     items.forEach((item, index) => {

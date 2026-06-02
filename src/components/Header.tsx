@@ -44,7 +44,7 @@ export default function Header() {
               <img
                 src="public/images/blusarte2.jpg"
                 alt="Logo Blusarte"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
 

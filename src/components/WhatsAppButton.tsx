@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 
 export default function WhatsAppButton() {
   const handleClick = () => {
-    const phone = "5511999999999";
+    const phone = "5575981482035";
     const message = encodeURIComponent(
       "Olá! Vim pelo site da BLUSARTE e gostaria de saber mais sobre as camisas."
     );
