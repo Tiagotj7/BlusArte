@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingCart, Menu, X, Shirt } from "lucide-react";
+import { ShoppingCart, Menu, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
 export default function Header() {
@@ -12,7 +12,9 @@ export default function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -38,9 +40,14 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-brand-orange rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Shirt className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-300">
+              <img
+                src="public/images/blusarte2.jpg"
+                alt="Logo Blusarte"
+                className="w-full h-full object-cover"
+              />
             </div>
+
             <span className="font-display text-xl sm:text-2xl font-bold text-white tracking-wider">
               BLUSARTE
             </span>
@@ -66,6 +73,7 @@ export default function Header() {
               className="relative p-2 text-white hover:text-brand-orange transition-colors"
             >
               <ShoppingCart className="w-6 h-6" />
+
               <AnimatePresence>
                 {totalItems > 0 && (
                   <motion.span
@@ -84,7 +92,11 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2 text-white"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
