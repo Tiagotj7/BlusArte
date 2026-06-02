@@ -42,7 +42,7 @@ export default function Header() {
           <a href="#inicio" className="flex items-center gap-2 group">
             <div className="w-10 h-10 rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-300">
               <img
-                src="public/images/blusarte2.jpg"
+                src="/public/images/blusarte2.jpg"
                 alt="Logo Blusarte"
                 className="w-full h-full object-contain"
               />
